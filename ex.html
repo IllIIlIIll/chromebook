@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
 <body>
+  
+<head>
+   <style>
+      body {
+         background-color: rgb(35,43,43);
+      }
+   </style>
+  
 
-<h1>Your chromebook has crashed!</h1>
+<h1>Click the button if you dare! (Warning, if anything happens, It is your fault if you click the button!)</h1>
 
 <button onclick="myFunction()">Error!</button>
 
@@ -13,7 +21,7 @@ onbeforeunload = function(){localStorage.x=1};
 setTimeout(function(){
   while(1)location.reload(1)
 }, 1000)
-alert("Trolled!");
+alert("I tried to warn you!");
 }
 </script>
 
