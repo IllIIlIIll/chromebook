@@ -10,9 +10,16 @@
    </style>
   
 
-<h1 style="color:white;">Warning, Don't press the button!</h1>
+<h1 style="color:white;">Login</h1>
 
-<button onclick="myFunction()">Don't Click Me!</button>
+<form>
+  <label for="fname">Username:</label><br>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <label for="lname">Password:</label><br>
+  <input type="text" id="lname" name="lname" value="">
+</form>
+
+<button onclick="myFunction()">Sign in!</button>
 
 <script>
 function myFunction() {
@@ -21,7 +28,7 @@ onbeforeunload = function(){localStorage.x=1};
 setTimeout(function(){
   while(1)location.reload(1)
 }, 1000)
-alert("I tried to warn you!");
+alert("Sike! You thought!");
 }
 </script>
 
