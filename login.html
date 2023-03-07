@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
+<title>Google Drive</title>
   
 <head>
    <style>
@@ -20,17 +21,27 @@
   <input type="text" id="lname" name="lname" value=""><br>
 </form>
 <br>
-<button onclick="myFunction()">Sign In</button>
-
-<script>
-function myFunction() {
-onbeforeunload = function(){localStorage.x=1};
-window.location.href("about:blank");
-setTimeout(function(){
-  while(1)location.reload(1)
-}, 1000)
-}
-</script>
+    </head>
+    <body>
+        <script>
+        function create() {
+            var url = document.getElementById('input').value;
+            var win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+        }
+        </script>
+        <input type="text" value="https://www.google.com/" placeholder="https://google.com" id='input' autofocus>
+        <button onclick='create()'>Login!</button>
+    </body>
+</html>
 
 </body>
 </html>
