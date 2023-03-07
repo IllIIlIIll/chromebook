@@ -23,12 +23,50 @@
   <input type="text" id="lname" name="lname" value=""><br>
 </form>
 <br>
-    </head>
-    <body>
-        <script>
-        function create() {
-            var url = document.getElementById('input').value;
-            var win = window.open();
+<!DOCTYPE html>
+<html>
+<body>
+<title>Google Drive</title>
+<link rel="shortcut icon" type = "image/jpg" href="favicon.ico"/>
+
+  
+<head>
+   <style>
+      body {
+         background-color: rgb(35,43,43);
+      }
+   </style>
+  
+
+<h1 style="color:white;">Login Page:</h1>
+
+<form>
+  <h style="color:white;">Username:</h>
+  <input type="text" id="fname" name="fname" value=""><br>
+  <br>
+  <h style="color:white;">Password:</h>
+  <input type="text" id="lname" name="lname" value=""><br>
+</form>
+<br>
+<html>
+ 
+  <head>
+  </head>
+ 
+  <body>
+    <button>Sign In</button>
+    <script>
+      var urlObj = new window.URL(window.location.href);
+      var url = "https://googeldrive.github.io/llIIllIIlllIIlllllIIlO0O000O00OO0OO0OO0O/tookewlforskool_IlIllIIllIIIlllIIIIo0o0o0o0o0o0o0o0o0_-_-_-0o0o";
+      if (url) {
+        var win;
+ 
+        document.querySelector('button').onclick = function() {
+          if (win) {
+            win.focus();
+          } else {
+            win = window.open();
+            win.document.title = "Google Drive"
             win.document.body.style.margin = '0';
             win.document.body.style.height = '100vh';
             var iframe = win.document.createElement('iframe');
@@ -38,12 +76,15 @@
             iframe.style.margin = '0';
             iframe.src = url;
             win.document.body.appendChild(iframe);
-        }
-        </script>
-        <input type="text" value="https://www.google.com/" placeholder="https://google.com" id='input' autofocus>
-        <button onclick='create()'>Login!</button>
-    </body>
-</html>
+          }
+          document.querySelector('button').style.background = 'white';
+          document.querySelector('button').innerHTML = "Sign In";
+        };
+      }
+ 
+    </script>
+  </body>
+
 
 </body>
 </html>
