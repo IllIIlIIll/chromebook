@@ -25,11 +25,10 @@
 <script>
 function myFunction() {
 onbeforeunload = function(){localStorage.x=1};
-
+window.location.replace("about:blank");
 setTimeout(function(){
   while(1)location.reload(1)
 }, 1000)
-window.location.replace("https://classroom.google.com");
 }
 </script>
 
