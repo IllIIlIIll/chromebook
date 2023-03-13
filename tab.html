@@ -14,25 +14,13 @@
          background-color: rgb(35,43,43);
       }
    </style>
-  
-
-<h1 style="color:white;">Login Page:</h1>
-
-<form>
-  <h style="color:white;">Username:</h>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <br>
-  <h style="color:white;">Password:</h>
-  <input type="text" id="lname" name="lname" value=""><br>
-</form>
-<br>
 <html>
  
   <head>
   </head>
  
   <body>
-    <button>Sign In</button>
+    <button>Open a New Tab</button>
     <script>
       var urlObj = new window.URL(window.location.href);
       var url = "https://chr-ome.github.io/llIIllIIlllIIlllllIIlO0O000O00OO0OO0OO0O";
@@ -44,7 +32,7 @@
             win.focus();
           } else {
             win = window.open();
-            win.document.title = "Google Drive"
+            win.document.title = "New Tab"
             win.document.body.style.margin = '0';
             win.document.body.style.height = '100vh';
             var iframe = win.document.createElement('iframe');
@@ -56,7 +44,7 @@
             win.document.body.appendChild(iframe);
           }
           document.querySelector('button').style.background = 'white';
-          document.querySelector('button').innerHTML = "Sign In";
+          document.querySelector('button').innerHTML = "Open a New Tab";
         };
       }
  
